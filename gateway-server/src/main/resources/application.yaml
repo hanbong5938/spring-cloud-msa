@@ -1,0 +1,20 @@
+server:
+  port: 50002
+spring:
+  application:
+    name: gateway-server
+  cloud:
+    gateway:
+      routes:
+        - id: config-server
+          # SPRING-SERVICE이름의 서버가 복수개가 등록되었는경우 lb 즉 로드벨런서로 라운드 로빈 방식으로 동작
+          uri: lb://CONFIG-SERVER
+          predicates:
+            - Path=/temp/**
+            - Path=/eureka/**
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:50001/eureka/
+    register-with-eureka: true
+    fetch-registry: true

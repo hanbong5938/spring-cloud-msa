@@ -1,0 +1,12 @@
+### config 접속
+# curl -X GET "http://localhost:50000/config/client"
+GET http://localhost:50000/config/client
+
+### temp-dev.yml
+# curl -X GET "http://localhost:50000/temp/dev"
+GET http://localhost:50000/temp/dev
+
+### eureka-dev.yml
+# curl -X GET "http://localhost:50000/eureka/dev"
+GET http://localhost:50000/eureka/dev
+
