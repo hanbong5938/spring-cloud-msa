@@ -1,0 +1,17 @@
+server:
+  port: 50000
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/hanbong5938/spring-boot-cloud-yml
+          default-label: main
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:50001/eureka/
+    register-with-eureka: true
+    fetch-registry: true

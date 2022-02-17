@@ -1,0 +1,3 @@
+### temp-dev.yml
+# curl -X GET "http://localhost:50002/temp/dev"
+GET http://localhost:50002/temp/dev
